@@ -21,7 +21,7 @@ jobs:
 
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: true
     - name: Set up JDK 11
@@ -47,12 +47,12 @@ jobs:
         arguments: build
 
     - name: Upload debug
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
           name: app-release
           path: wrapper/launcher/build/outputs/apk/debug/*
     - name: Upload release
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
           name: app-debug
           path: wrapper/launcher/build/outputs/apk/release/*
